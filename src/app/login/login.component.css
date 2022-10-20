@@ -1,0 +1,141 @@
+.hover-overlay {
+    background: linear-gradient(45deg,
+            rgba(29, 236, 197, 0.5),
+            rgba(91, 14, 214, 0.5) 100%);
+}
+
+img {
+    margin: 5px;
+    height: 60px;
+    width: 60px;
+    border-radius: 60px;
+}
+
+.span {
+    padding-left: 300px;
+    padding-top: 50px;
+    font-size: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    color: whitesmoke;
+}
+
+.container {
+    margin-top: 50px;
+    height: 50%;
+    width: 20%;
+    text-align: left;
+}
+
+.d-flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+.mt-top {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.signbut {
+    width: 250px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.forgot,
+.create {
+    float: left;
+    cursor: pointer;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.forgot:hover,
+.create:hover {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: brown;
+}
+
+/* .signbut:focus,
+  .signbut:valid{
+    border-color: #1d5c27;
+  } */
+
+.mt-top-2 {
+    margin-top: 10px;
+}
+
+.redtext {
+    color: red;
+    font-size: 13px;
+    padding-top: 2px;
+}
+
+
+.input-field {
+    position: relative;
+    width: 250px;
+    height: 44px;
+    line-height: 10px;
+    margin-bottom: 20px;
+}
+
+label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #d3d3d3;
+    transition: 0.3s all;
+    cursor: text;
+    color: #0a0c0b;
+}
+.pt-5 {
+    padding-top: 5rem!important;
+}
+
+
+
+input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid #ebd6d6;
+}
+
+input:invalid {
+    outline: 0;
+    color: #5e615f;
+    border-color: darkgray;
+}
+
+input:focus,
+input:valid {
+    border-color: #045a11;
+}
+
+input:focus~label,
+input:valid~label {
+    font-size: 20px;
+    color: #131212;
+    top: -24px;
+
+}
+
+.card {
+    margin-left: 26%;
+    margin-right: 29%;
+    padding-top: 2%;
+    padding-bottom:2%;
+    border-radius: 3%;
+    border-color: #0a0c0b;
+
+}

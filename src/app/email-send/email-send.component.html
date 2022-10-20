@@ -1,0 +1,61 @@
+<app-header></app-header>
+<form id="contact_form" name="contact_form" method="post" novalidate action="#">
+    <div class="col-md-8">
+        <label for="name_input" class="form-label">From</label>
+        <input type="text" required minlength="2" maxlength="20" class="form-control" id="name_input" 
+        name="name" placeholder="Email" [(ngModel)]="sendCustomer">
+        <div class="invalid-feedback">Please provide From Email</div>
+    </div>  <br>
+    <!-- <div class="col-md-8">
+        <label for="email_addr" class="form-label">To Email </label>
+        <input type="email" required minlength="2" maxlength="50" class="form-control" id="email_addr" name="email"
+            placeholder="name@example.com">
+        <div class="invalid-feedback">Please enter To email address</div>
+    </div><br> -->
+    <!-- <div class="col-md-8">
+        <label for="phone_input" class="form-label">subject</label>
+        <input type="tel" required maxlength="50" class="form-control" id="phone_input" name="subject"
+            placeholder="subject">
+        <div class="invalid-feedback">Please Provide your phone number</div>
+    </div><br>
+    <div class="col-md-8">
+        <label for="message" class="form-label">Message</label>
+        <textarea maxlength="2500" required class="form-control" id="message" name="message" rows="5"></textarea>
+    </div><br> -->
+    <button type="submit" class="btn btn-primary px-4" (click)="sendReq()">Send</button>
+</form>
+<tbody *ngIf="sendrequest">
+    <thead>
+        <th>Mail</th>
+        <th>Sent</th>
+    </thead>
+    <tr *ngFor="let mail of sendrequest">
+        <td>{{mail}}</td>
+        <td>Yes</td>
+    </tr>
+</tbody>
+
+<!-- {{sendrequest}} -->
+    
+    
+
+
+<!-- 
+<script>
+    
+
+(() => {
+  'use strict'
+
+  const form = document.getElementById('contact_form');
+  
+  form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+})()
+</script> -->

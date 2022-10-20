@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-sm head hover-overlay">
+  <div class="container-fluid">
+    <img src="assets/logo.png" alt=" Loading ">
+    <a class="navbar-brand" href="#">IPL Feedback System</a>
+  </div>
+  </nav>
+<div class="pt-5">
+  <div class="global-container">
+    <div class="card login-form"><br>
+      <div class="card-body">
+        <div class="card-text">
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate class="d-flex-center">
+            <div class="example-container">
+            <div class="input-field">
+                <mat-form-field class="email">
+                  <input matInput formControlName="email" type="text" id="name" required>
+
+                  <label for="name">Email:</label>
+                  <mat-error
+                    *ngIf="!loginForm.get('email')?.errors?.required && (loginForm.get('email')?.errors?.pattern)"
+                    class="redtext">
+                    Please enter a valid email address
+                  </mat-error>
+                  <mat-error
+                    *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched) && loginForm.get('email')?.errors?.required"
+                    class="redtext">
+                    Email is required
+                  </mat-error>
+               </mat-form-field>
+            </div>
+              <br>
+              <div class="mt-top-2 form-floating mb-3 input-field">
+                <mat-form-field>
+                  <input matInput type="password" formControlName="password" id="name" required>
+                  <label for="name">Password: </label>
+                  <mat-error *ngIf="!loginForm.get('password')?.errors?.required" class="redtext">
+                    Please enter a valid password(uppercase , lowercase , numeric and special
+                    characters)
+                    <!-- Password length must be greater than or equal to 8 and password must contain one or more uppercase , lowercase , numeric and special characters -->
+                  </mat-error>
+                  <mat-error
+                    *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched) && loginForm.get('password')?.errors?.required"
+                    class="redtext">
+                    Password is required
+                  </mat-error>
+
+                </mat-form-field>
+              </div>
+              <p (click)="forgotPassword()" class="forgot"> Forgot password?</p>
+              <p style="float: right;" (click)="createAccount()" class="create"> Don't Have Account?</p>
+            <div>
+                <button class="mt-top " [disabled]="!loginForm.valid" mat-raised-button class="btn btn-success"
+                  class="signbut">Sign In</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+.hover-overlay {
+    background: linear-gradient(45deg,
+            rgba(29, 236, 197, 0.5),
+            rgba(91, 14, 214, 0.5) 100%);
+}
+img
+{
+    height: 40px;
+    width: 50px;
+    padding-right: 10px;
+}
+li a{
+    float: right;
+}

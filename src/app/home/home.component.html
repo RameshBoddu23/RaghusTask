@@ -1,0 +1,45 @@
+<app-header></app-header>
+<br>
+<!-- <div class="form-group col-md-8">
+    <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="filterTerm" filterText=searchText; />
+
+</div> -->
+<div>
+    <button (click)="excelExport()">Export</button>
+</div>
+<div class="tb">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Times Sent</th>
+                <th scope="col">Created By</th>
+                <th scope="col">Send Mail Date</th>
+                <th scope="col">Updated By</th>
+                <th scope="col">Replied Date</th>
+                <th scope="col">Sent Subject</th>
+                <th scope="col">Sent body</th>
+                <th scope="col">Reply Subject</th>
+                <th scope="col">Reply Body</th>
+                <th scope="col">Response</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let d of emaildata ">
+                <td>{{d.name}}</td>
+                <td>{{d.email_id}}</td>
+                <td>{{d.send_mails_count}}</td>
+                <td>{{d.created_by}}</td>
+                <td>{{d.send_mail_date}}</td>
+                <td>{{d.updated_by}}</td>
+                <td>{{d.replied_date}}</td>
+                <td>{{d.mail_subject}}</td>
+                <td>{{d.mail_body}}</td>
+                <td>{{d.reply_subject}}</td>
+                <td>{{d.reply_body}}</td>
+                <td>{{d.reply_status}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
