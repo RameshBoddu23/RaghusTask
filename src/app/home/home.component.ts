@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { EmailService } from '../email.service';
 import * as XLSX from 'xlsx';
 import { FileSaverService } from 'ngx-filesaver';
-import { ThisReceiver } from '@angular/compiler';
 
 @Component({
   selector: 'app-home',
@@ -14,13 +13,17 @@ export class HomeComponent implements OnInit {
   emaildata: any;
   filterTerm!: string;
   constructor(private emailservice: EmailService, private fileSaver: FileSaverService) { }
-
+  POSTS:any
+  page: number = 1;
+  count: number = 0;
+  tableSize: number = 4;
   ngOnInit(): void {
     this.get();
   }
 
   get() {
-    this.emailservice.get().subscribe((data) => {
+    this.emailservice.getAll("data").subscribe((data) => {
+      console.log(data)
       this.emaildata = data;
     })
   }
@@ -37,5 +40,26 @@ export class HomeComponent implements OnInit {
 const blobData = new Blob([excelBuffer], { type: EXCEL_TYPE });
     // By using file saver
     this.fileSaver.save(blobData, "demoFile");
+  } 
+
+ 
+  onTableDataChange(event: any) {
+    this.page = event;
+   this.get();
   }
+
+  context: string | undefined
+
+openFile(event: any): void {
+  const input = event.target;
+  const reader = new FileReader();
+  reader.onload = (() => {
+    if (reader.result) {
+      this.context = JSON.parse(reader.result.toString())
+      console.log(JSON.parse(reader.result.toString()));
+    }
+  });
+  reader.readAsText(input.files[0], 'utf-8');
+  }
+ 
 }

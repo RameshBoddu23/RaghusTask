@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CreateAccountComponent } from './create-account/create-account.component';
 import { EmailRespondComponent } from './email-respond/email-respond.component';
 import { EmailSendComponent } from './email-send/email-send.component';
 import { HeaderComponent } from './header/header.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path:'Header',component:HeaderComponent},
   {path:'Email-Send',component:EmailSendComponent},
   {path:'Email-Respond',component:EmailRespondComponent},
+  {path:'create', component:CreateAccountComponent}
   
 ];
 

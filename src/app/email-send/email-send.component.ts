@@ -19,20 +19,20 @@ export class EmailSendComponent implements OnInit {
     this.sendFrom();
   }
   get(){
-    this.emailservice.get().subscribe((data)=>{
+    this.emailservice.getAll("data").subscribe((data)=>{
       debugger;
       this.emaildata = data;
       console.log(this.emaildata)
     })
   }
   sendFrom(){
-    this.emailservice.sendfrom().subscribe((data: any)=>{
+    this.emailservice.sendfrom("data").subscribe((data: any)=>{
       this.sendCustomer=data['send From'][0];
       console.log(this.sendCustomer)
     })
   }
   sendReq(){
-      this.emailservice.sendMail().subscribe((data:any)=>{
+      this.emailservice.sendMail("data").subscribe((data:any)=>{
         // data.map((e:any)=>{
         //   JSON.parse(e)
         // })

@@ -1,11 +1,10 @@
 <app-header></app-header>
 <br>
-<!-- <div class="form-group col-md-8">
+<div class="form-group col-md-8">
     <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="filterTerm" filterText=searchText; />
-
-</div> -->
-<div>
-    <button (click)="excelExport()">Export</button>
+</div><br>
+<div><input type="file" accept=".csv,.txt,.json,.xlxs" (change)="openFile($event)">
+    <button class="btn btn-primary" (click)="excelExport()">Export</button>
 </div>
 <div class="tb">
     <table class="table table-striped">
@@ -26,7 +25,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let d of emaildata ">
+            <tr *ngFor="let d of emaildata | paginate:{ itemsPerPage: tableSize, currentPage: page, totalItems: count} | filter:filterTerm ">
                 <td>{{d.name}}</td>
                 <td>{{d.email_id}}</td>
                 <td>{{d.send_mails_count}}</td>
@@ -43,3 +42,9 @@
         </tbody>
     </table>
 </div>
+<div class="d-flex justify-content-center">
+    <pagination-controls
+     previousLabel="Prev"
+      nextLabel="Next"
+       (pageChange)="onTableDataChange($event)">
+    </pagination-controls>

@@ -47,10 +47,10 @@
                 </mat-form-field>
               </div>
               <p (click)="forgotPassword()" class="forgot"> Forgot password?</p>
-              <p style="float: right;" (click)="createAccount()" class="create"> Don't Have Account?</p>
+              <p style="float: right;"  routerLink="/create" class="create"> Create an Account</p>
             <div>
                 <button class="mt-top " [disabled]="!loginForm.valid" mat-raised-button class="btn btn-success"
-                  class="signbut">Sign In</button>
+                  class="signbut" >Sign In</button>
               </div>
             </div>
           </form>

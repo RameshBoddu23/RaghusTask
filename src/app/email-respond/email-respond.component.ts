@@ -18,7 +18,7 @@ export class EmailRespondComponent implements OnInit {
     this.readRes();
   }
   get(){
-    this.emailservice.get().subscribe((data: any)=>{
+    this.emailservice.getAll("data").subscribe((data: any)=>{
       debugger;
       this.emaildata = data;
       console.log(this.emaildata)
@@ -26,7 +26,7 @@ export class EmailRespondComponent implements OnInit {
   }
     
     readRes(){
-      this.emailservice.response().subscribe((data:any)=>{
+      this.emailservice.response("data").subscribe((data:any)=>{
         // data.map((e:any)=>{
         //   JSON.parse(e)
         // })

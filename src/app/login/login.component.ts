@@ -39,7 +39,8 @@ export class LoginComponent implements OnInit {
     alert("Password reset link sent to your registered Email")
   }
   createAccount() {
-    alert("Create your account")
+    this.router.navigate(['/Login'])
+    // alert("Create your account")
   }
 
 

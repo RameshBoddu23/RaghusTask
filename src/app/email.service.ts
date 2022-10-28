@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { RegistrationIntrface } from './registration-intrface';
 
 @Injectable({
   providedIn: 'root'
@@ -8,17 +9,23 @@ export class EmailService {
 
   constructor(private http:HttpClient) { }
 
-  get(){
-    return this.http.get('http://localhost:8080/app/getAll');
+  getAll(payload:any){
+    return this.http.post('https://7ec1-115-117-172-107.in.ngrok.io/app/getAll', payload);
   }
-
-  sendMail(){
-    return this.http.get('http://localhost:8080/app/sendMail');
+  create(payload:RegistrationIntrface){
+    return this.http.post('http://localhost:8080/app/api/v1/registration',payload);
   }
-  sendfrom(): any{
-    return this.http.get('http://localhost:8080/app/fromMail');
+  login(payload:any)
+  {
+    return this.http.post('https://7ec1-115-117-172-107.in.ngrok.io/app/login',payload);
   }
-  response(){
-    return this.http.get("http://localhost:8080/app/test");
+  sendMail(paylaod:any){
+    return this.http.post('https://7ec1-115-117-172-107.in.ngrok.io/app/sendMail', paylaod);
+  }
+  sendfrom(payload: any){
+    return this.http.post('https://7ec1-115-117-172-107.in.ngrok.io/app/fromMail', payload);
+  }
+  response(paylaod:any){
+    return this.http.post('https://7ec1-115-117-172-107.in.ngrok.io/app/test', paylaod);
   }
 }

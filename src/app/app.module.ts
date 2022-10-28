@@ -9,9 +9,12 @@ import { EmailService } from './email.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule,FormGroup } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
-// import { Ng2SearchPipeModule } from "ng2-search-filter";
+import { Ng2SearchPipeModule } from "ng2-search-filter";
 import { EmailSendComponent } from './email-send/email-send.component';
 import { EmailRespondComponent } from './email-respond/email-respond.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { CreateAccountComponent } from './create-account/create-account.component';
+
 
 
 
@@ -23,6 +26,7 @@ import { EmailRespondComponent } from './email-respond/email-respond.component';
     HomeComponent,
     EmailSendComponent,
     EmailRespondComponent,
+    CreateAccountComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,8 @@ import { EmailRespondComponent } from './email-respond/email-respond.component';
     FormsModule,
     ReactiveFormsModule,  
     MatFormFieldModule,
-    // Ng2SearchPipeModule  
+    NgxPaginationModule,
+    Ng2SearchPipeModule  
   ],
   providers: [EmailService],
   bootstrap: [AppComponent]
