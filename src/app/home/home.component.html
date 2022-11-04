@@ -27,8 +27,6 @@
             <tr *ngFor="let d of emaildata | paginate:{ itemsPerPage: tableSize, currentPage: page, totalItems: count} | filter:filterTerm ">
                 <td>{{d.name}}</td>
                 <td>{{d.email_id}}</td>
-               
-                
                 <td>{{d.replied_date}}</td>
                 <td>{{d.sent_mail_date}}</td>
                 <td>{{d.mail_subject}}</td>
