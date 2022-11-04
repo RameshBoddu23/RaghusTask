@@ -20,7 +20,7 @@ export class EmailSendComponent implements OnInit {
   }
   get(){
     this.emailservice.getAll("data").subscribe((data)=>{
-      debugger;
+     // debugger;
       this.emaildata = data;
       console.log(this.emaildata)
     })
@@ -31,17 +31,17 @@ export class EmailSendComponent implements OnInit {
       console.log(this.sendCustomer)
     })
   }
-  sendReq(){
-      this.emailservice.sendMail("data").subscribe((data:any)=>{
+  sentReq(){
+      this.emailservice.sendMail("data").subscribe((data:any=[])=>{
         // data.map((e:any)=>{
         //   JSON.parse(e)
-        // })
-        this.sendrequest=data["send to"][0]
-       
+        // }) 
+        console.log(data)
+        
+        this.sendrequest=(data['sent to'])
         console.log("request done", this.sendrequest);
       })
   }
-
 }
    
     

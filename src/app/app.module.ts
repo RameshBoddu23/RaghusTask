@@ -7,17 +7,13 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { EmailService } from './email.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule,FormGroup } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule,   } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { Ng2SearchPipeModule } from "ng2-search-filter";
 import { EmailSendComponent } from './email-send/email-send.component';
 import { EmailRespondComponent } from './email-respond/email-respond.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { CreateAccountComponent } from './create-account/create-account.component';
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,

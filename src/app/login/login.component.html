@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-sm head hover-overlay">
   <div class="container-fluid">
-    <img src="assets/logo.png" alt=" Loading ">
-    <a class="navbar-brand" href="#">IPL Feedback System</a>
+    <img src="./assets/emialLogo.jfif" alt=" Loading ">
+    <a class="navbar-brand title" href="#">EMAIL Feedback System</a>
   </div>
   </nav>
 <div class="pt-5">
@@ -48,9 +48,10 @@
               </div>
               <p (click)="forgotPassword()" class="forgot"> Forgot password?</p>
               <p style="float: right;"  routerLink="/create" class="create"> Create an Account</p>
+
+              
             <div>
-                <button class="mt-top " [disabled]="!loginForm.valid" mat-raised-button class="btn btn-success"
-                  class="signbut" >Sign In</button>
+                <button class="mt-top " [disabled]="!loginForm.valid" mat-raised-button class="btn signbut" >Sign In</button>
               </div>
             </div>
           </form>

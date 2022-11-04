@@ -30,8 +30,10 @@ export class EmailRespondComponent implements OnInit {
         // data.map((e:any)=>{
         //   JSON.parse(e)
         // })
-        this.readResponse=data["response"] ?? [];
+        console.log(data);
+        this.readResponse=Object.values(data) ?? [];
         console.log("res", this.readResponse);
+        // value.replace("Re: ", "")
       })
   }
 

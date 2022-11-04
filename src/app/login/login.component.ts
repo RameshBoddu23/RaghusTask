@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, createComponent, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,7 +15,9 @@ export class LoginComponent implements OnInit {
 
   form: FormGroup = new FormGroup({});
   loginForm: FormGroup | any;
-  title = 'material-login';
+  // title = 'material-login';
+  username='vijaykumar.reddy@kanerika.com';
+  password='ABcd@1234'
   constructor(
     private fb: FormBuilder,
     private router: Router) {
@@ -31,9 +34,16 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
   onSubmit() {
+    if(this.loginForm.value.email==this.username && this.loginForm.value.password==this.password)
 
+    {
     this.router.navigate(['/Home'])
   }
+  else{
+    alert("Enter valid credentails")
+  }
+}
+
 
   forgotPassword() {
     alert("Password reset link sent to your registered Email")
@@ -42,7 +52,4 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['/Login'])
     // alert("Create your account")
   }
-
-
-
 }

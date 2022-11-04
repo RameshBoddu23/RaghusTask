@@ -3,12 +3,21 @@
             rgba(29, 236, 197, 0.5),
             rgba(91, 14, 214, 0.5) 100%);
 }
-img
+.title
 {
-    height: 40px;
-    width: 50px;
-    padding-right: 10px;
+    color: chocolate;
+    font-weight: bold;
+}
+img {
+    margin: 5px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
 }
 li a{
+    float: right;
+}
+.logout
+{
     float: right;
 }

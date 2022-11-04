@@ -1,3 +1,11 @@
 .tb{
     overflow-x: auto;
 }
+.btn
+{
+    width: 90px;
+    margin-left: 10px;
+}
+.search{
+    margin-left: 10px;
+}

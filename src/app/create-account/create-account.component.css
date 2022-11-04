@@ -1,0 +1,30 @@
+
+.hover-overlay {
+    background: linear-gradient(45deg,
+            rgba(29, 236, 197, 0.5),
+            rgba(91, 14, 214, 0.5) 100%);
+}
+.title
+{
+    color: chocolate;
+    font-weight: bolder;
+    
+}
+
+img {
+    margin: 5px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+}
+.container {
+    margin:10px;
+}
+
+
+
+
+
+
+
+

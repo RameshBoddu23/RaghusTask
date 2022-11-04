@@ -22,16 +22,20 @@
         <label for="message" class="form-label">Message</label>
         <textarea maxlength="2500" required class="form-control" id="message" name="message" rows="5"></textarea>
     </div><br> -->
-    <button type="submit" class="btn btn-primary px-4" (click)="sendReq()">Send</button>
+    <button type="submit" class="btn btn-primary px-4" (click)="sentReq()">Sent</button>
 </form>
 <tbody *ngIf="sendrequest">
     <thead>
-        <th>Mail</th>
-        <th>Sent</th>
+        <th>Mail  </th>
+        <th>  Sent</th>
     </thead>
-    <tr *ngFor="let mail of sendrequest">
-        <td>{{mail}}</td>
-        <td>Yes</td>
+    <tr *ngFor="let d of sendrequest">
+        <td><ul *ngFor="let a of d">
+            <li>
+                {{a}}
+            </li>
+        </ul></td>
+        
     </tr>
 </tbody>
 

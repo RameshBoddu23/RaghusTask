@@ -15,9 +15,7 @@ const routes: Routes = [
   {path:'Email-Send',component:EmailSendComponent},
   {path:'Email-Respond',component:EmailRespondComponent},
   {path:'create', component:CreateAccountComponent}
-  
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

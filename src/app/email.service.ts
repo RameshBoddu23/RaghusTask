@@ -6,26 +6,23 @@ import { RegistrationIntrface } from './registration-intrface';
   providedIn: 'root'
 })
 export class EmailService {
-
-  constructor(private http:HttpClient) { }
-
-  getAll(payload:any){
-    return this.http.post('https://7ec1-115-117-172-107.in.ngrok.io/app/getAll', payload);
+  constructor(private http: HttpClient) { }
+  getAll(payload: any) {
+    return this.http.post('https://0a76-115-117-172-107.in.ngrok.io/app/getAll', payload);
   }
-  create(payload:RegistrationIntrface){
-    return this.http.post('http://localhost:8080/app/api/v1/registration',payload);
+  create(payload: RegistrationIntrface) {
+    return this.http.post('https://0a76-115-117-172-107.in.ngrok.io/app/api/v1/registration', payload);
   }
-  login(payload:any)
-  {
-    return this.http.post('https://7ec1-115-117-172-107.in.ngrok.io/app/login',payload);
+  login(payload: any) {
+    return this.http.post('https://0a76-115-117-172-107.in.ngrok.io/app/api/v1/login', payload);
   }
-  sendMail(paylaod:any){
-    return this.http.post('https://7ec1-115-117-172-107.in.ngrok.io/app/sendMail', paylaod);
+  sendMail(paylaod: any) {
+    return this.http.post('https://0a76-115-117-172-107.in.ngrok.io/app/sentMailList', paylaod);
   }
-  sendfrom(payload: any){
-    return this.http.post('https://7ec1-115-117-172-107.in.ngrok.io/app/fromMail', payload);
+  sendfrom(payload: any) {
+    return this.http.post('https://0a76-115-117-172-107.in.ngrok.io/app/fromMail', payload);
   }
-  response(paylaod:any){
-    return this.http.post('https://7ec1-115-117-172-107.in.ngrok.io/app/test', paylaod);
+  response(paylaod: any) {
+    return this.http.post('https://0a76-115-117-172-107.in.ngrok.io/app/test', paylaod);
   }
 }
